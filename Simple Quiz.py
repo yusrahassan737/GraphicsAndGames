@@ -1,7 +1,6 @@
 # Name: Yusra Hassan
 # Date: general idea = summer 2020; creation = Nov. 26, 2020
-# Class: None- Personal project
-# Description: Asks questions to the user until they get one wrong, counts correct questions
+# Description: Asks simple math questions to the user until they get one wrong, counts correct questions
 # Purpose: Simple practice with input games
 
 # import module and store points in a global variable

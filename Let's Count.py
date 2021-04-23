@@ -5,18 +5,17 @@
 
 import random
 
-# input variables with error handling
+# Input with error handling
 userTurn = input("Enter \"0\" to go first or \"1\" to go second: ")
 while userTurn != str(0) and userTurn != str(1):
     userTurn = input("Try again. Enter \"0\" to go first or \"1\" to go second: ")
 userTurn = int(userTurn)
-
 maxNum = input("Enter the number to count up to: ")
 while not maxNum.isdigit():
     maxNum = input("Try again. Enter the number to count up to: ")
 maxNum = int(maxNum)
 
-# Other Variables
+# Variables
 if userTurn == 1:
     userNum = 0
 else:

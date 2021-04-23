@@ -1,7 +1,7 @@
-#For the last and second last questions, it is VITAL to enter a number.
-#JUST a number. AND NO DECIMALS.
-#I have tried and failed to restrict the user input to only integers
-#So, you will HAVE to follow these instructions or the program WILL NOT PROCEED (properly atleast)
+# Name: Yusra Hassan
+# Date: (Initially Created) June 19, 2020
+# Description: Takes input and outputs a dessert and its properties
+# Purpose: Basic python practice (especially input)
 
 print("In this program, fill in some info and I will find you the dessert you deserve.")
 print("\n")

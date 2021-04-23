@@ -1,8 +1,7 @@
 # Name: Yusra Hassan
 # Date: December 6, 2020
-# Class: None- Personal Project
 # Description: A math quiz (based on "Simple Quiz" program) that calculates streaks of correct answers
-# Purpose: Practice with calculating streaks
+# Purpose: Practice with counting streaks
 
 # import necessary module and store streak in a global variable
 import random

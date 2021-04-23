@@ -1,38 +1,44 @@
 # Name: Yusra Hassan
 # Date: (Initially Created) June 19, 2020
 # Description: Takes input and outputs a dessert and its properties
-# Purpose: Basic python practice (especially input)
+# Purpose: Fun, basic python practice (especially input and error handling)
 
-print("In this program, fill in some info and I will find you the dessert you deserve.")
-print("\n")
-print("What is your name?")
-name = input("Enter name: ")
-if name == "shiza" or name == "Shiza":
+# Variables and instructions
+validClrs = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "mauve", "scarlet", "turquoise", "teal", "violet", "brown", "beige", "maroon", "periwinkle"]
+desserts = ("cupcakes", "macaroons", "macarons", "cookies", "icecream cakes","meringues", "donuts", "brownies", "truffles", "pies")
+print("In this program, fill in some info and I will find you the dessert you deserve (and how many).")
+
+# Get name
+print("\nWhat is your name?")
+name = input("Enter name: ").capitalize()
+if name.lower() == "shiza":
     print("Hello weirdo.")
-elif name == "Yusra" or name == "yusra":
+elif name.lower() == "yusra":
     print("Hello cool person.")
 else:
     print("Hello " + name + ".")
 
-nopeSet = {"black", "Black", "grey", "Grey", "white", "White"}
-print("\n")
-print("What is your favourite colour?")
+# Get colour
+print("\nWhat is your favourite colour?")
 favColour = input("Enter colour: ")
-while favColour in nopeSet:
-    print(favColour + " is a shade -not a colour. You can do better " + name + ".")
+while favColour.lower() not in validClrs:
+    print("\n" + favColour + " is not a valid colour. You can do better " + name + ".")
     favColour = input("Enter colour: ")
 print("Cool.")
 
-print("\n")
-print("What is your age?")
+# Get age
+print("\nWhat is your age?")
 age = input("Enter age: ")
+while not age.isdigit() or int(age) < 0:
+  age = input("Enter a valid age: ")
+print("Wow, you're old!")
 
-print("\n")
-print("Finally, tell me a number from one to ten.")
+# Get a random number
+print("\nFinally, tell me a number from one to ten.")
 num = input("Enter number: ")
+while not num.isdigit() or int(num) < 1 or int(num) > 10:
+  num = input("Enter a valid age: ")
+print("Thanks!")
 
-desserts = ("cupcakes", "macaroons", "macarons", "cookies", "icecream cakes","meringues", "donuts", "brownies", "truffles", "pies")
-k = int(num)- 1
-
-print("\n")
-print(name + ", your deserved desserts are " + age + " " + favColour + " " + desserts[k] + ".")
+# Print the answer
+print("\n" + name + ", your deserved desserts are " + age + " " + favColour + " " + desserts[int(num) - 1] + "!")

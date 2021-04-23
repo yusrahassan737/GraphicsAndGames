@@ -1,8 +1,7 @@
 # Name: Yusra Hassan
 # Date: December 15-16, 2020
-# Class: None- Personal Project
-# Description: Simple program to count with the user to an input-specified number
-# Purpose: Practice with AI before creating first AI game
+# Description: Simple program to count with the user to an input-specified number one number at a time
+# Purpose: Practice with continuous input and output
 
 import random
 

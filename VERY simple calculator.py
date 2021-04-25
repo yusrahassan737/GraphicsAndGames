@@ -1,12 +1,10 @@
-""" Current problems : It takes 3 lines to enter a problem
-It can not solve problems using more than one operation
-It does not allow another "calc" after "ans"
-Make a mouse-interactive pygame one?
-"""
+# Name: Yusra Hassan
+# Date: June 25, 2020
+# Description: Simple calculator
+# Purpose: Practice with arithmetic operations
 
-print("This program calculates some simple operations.")
-action = input("Type \"calc\" to perform the operation: ")
-
+# Variables + Functions
+validOps = ["+", "-", "/", "x", "*", "^"]
 def calculate(num1, operation, num2):
   if operation == "+":
     return(float(num1) + float(num2))
@@ -19,14 +17,13 @@ def calculate(num1, operation, num2):
   elif operation == "^":
     return(pow(float(num1), float(num2)))
 
-while action == "calc":
-  ans = calculate(input("Enter your first number: "), input("Enter an operation(+, -, x, /, ^): "), input("Enter your second number: "))
-  print(ans)
-  action = input("Type \"calc\" to perform another operation or \"ans\" to perform an operation on your previous answer: ")
+# Start
+print("This program calculates some simple single operations.")
+question = input("Enter your question with one space between each number or operator: ")
 
-while action == "ans":
-  newAns = calculate(ans, input("Enter an operation(+, -, x, /, ^): "), input("Enter your second number: "))
-  print(newAns)
-  action = input("Type \"calc\" to perform another operation or \"ans\" to perform an operation on your previous answer: ")
-  ans = newAns
+# Error handling for entered question
+while " " not in question or len(question.split()) != 3 or question.split()[0].count(".") > 1 or not question.replace(".","").split()[0].isdigit() or question.split()[1] not in validOps or question.split()[2].count(".") > 1 or not question.replace(".","").split()[2].isdigit():
+  question = input("Try again. Enter your question with one space between each number or operator: ")
 
+# Calculate
+print(calculate(question.split()[0], question.split()[1], question.split()[2]))

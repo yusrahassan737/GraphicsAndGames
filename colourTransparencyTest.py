@@ -1,6 +1,7 @@
 # Name: Yusra Hassan
 # Date: November 15, 2020
 # Description: Figure out how to work alpha values for colour tuples, create a gradient
+# Purpose: Practice with multiple screens
 
 # Start-up
 import pygame
